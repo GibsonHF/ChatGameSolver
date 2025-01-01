@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "chatgames",
+  "version": "${version}",
+  "name": "ChatGameSolver",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "me.gibson.chatgames.client.ChatGameSolver"
+    ],
+    "main": [
+      "me.gibson.chatgames.Chatgames"
+    ]
+  },
+  "mixins": [
+    "chatgames.mixins.json",
+    {
+      "config": "chatgames.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
